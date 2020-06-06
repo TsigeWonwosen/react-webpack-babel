@@ -32,5 +32,14 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebPackPlugin({ template: "./src/index.html" })],
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
+    // New plugin
+    new HtmlWebpackPlugin({
+      // injects bundle.js to our new index.html
+      inject: true,
+      // copys the content of the existing index.html to the new /build index.html
+      template:  path.resolve('./index.html'),
+    }),
+    
 };
