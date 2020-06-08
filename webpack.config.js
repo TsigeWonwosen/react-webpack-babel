@@ -1,5 +1,6 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -33,13 +34,15 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    // new webpack.optimize.UglifyJsPlugin(),
     // New plugin
-    new HtmlWebpackPlugin({
-      // injects bundle.js to our new index.html
-      inject: true,
-      // copys the content of the existing index.html to the new /build index.html
-      template:  path.resolve('./index.html'),
-    }),
-    
+    new HtmlWebPackPlugin(),
+    //   {
+    //   // injects bundle.js to our new index.html
+    //   inject: true,
+    //   // copys the content of the existing index.html to the new /build index.html
+    //   template: "./src/index.html",
+    // }
+  ],
 };

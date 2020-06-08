@@ -11,7 +11,7 @@ export default function NavBar() {
           <li>React</li>
           <li>Webpack</li>
           <li>Babel</li>
-          <li>Css</li>
+          <li>Scss</li>
         </ul>
       </div>
     </div>

@@ -1,24 +1,39 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import NavBar from "./components/NavBar";
+import Count from "./components/Count";
+import Todo from "./components/Todo";
+import { TodoContext } from "./context/showContext";
 
 const App = () => {
-  const [show, setShow] = useState(false);
+  const {
+    state: { show },
+    dispatch,
+  } = useContext(TodoContext);
+
   const showText = () => {
-    setShow(!show);
+    dispatch({ type: "SHOW" });
   };
+
   return (
     <>
       <NavBar />
       <div className='container'>
-        <h1>Hello React - Webpack</h1>
-        <button className='btnShow' onClick={showText}>
-          {!show ? "Show Text" : "Hide Text"}
-        </button>
-        {show && (
-          <p className='showParagraph'>
-            React configuration - with Out create-react-app.
-          </p>
-        )}
+        <h1>React With Webpack Scss Context And Reducer</h1>
+        <div className='row'>
+          <div className='col'>
+            <Count />
+          </div>
+          <div className='col col2'>
+            <div className='todo-btn'>
+              <button className='btnShow' onClick={showText}>
+                {!show ? "Show Text" : "Hide Text"}
+              </button>
+            </div>
+            <div className='todo-list'>
+              {show ? <Todo /> : <h4>Todo List Is Hide</h4>}
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
