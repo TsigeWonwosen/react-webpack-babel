@@ -40,17 +40,17 @@ body {
         .todo-btn {
           flex: 1;
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
           align-items: center;
           height: 100%;
-          width: 100%;
+          width: 90%;
           border: 1px solid rgba(209, 153, 120, 0.2);
         }
         .todo-list {
           margin: 1rem auto;
           height: 100%;
           width: 90%;
-          flex: 3;
+          flex: 6;
           background-color: rgba(255, 255, 255, 0.3);
           border: 1px solid rgba(216, 208, 241, 0.2);
           border-radius: 0.5rem;
@@ -63,6 +63,13 @@ body {
       padding: 1rem;
       margin: 1rem auto;
       color: rgb(12, 25, 83);
+      h3 {
+        letter-spacing: 0.2rem;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 0.2rem;
+      }
       ul {
         list-style: none;
         font-size: 1.3rem;
@@ -76,18 +83,55 @@ body {
           display: flex;
           justify-content: space-between;
         }
-        button {
-          padding: 0.2rem 0.5rem;
-          background-color: rgb(80, 200, 69);
-          border-radius: 0.4rem;
-          outline: none;
-          &:hover {
-            background-color: rgb(56, 231, 40);
-          }
-        }
+      }
+    }
+    .todo-input {
+      padding: 0.34rem 0.3rem;
+      width: 70%;
+      margin: 0.3rem 0.3rem;
+      border-radius: 0.3rem;
+      outline: none;
+      border: none;
+      &:focus {
+        border-bottom: 2px solid #49d4c9;
+        background-color: #d6dfd5;
+      }
+    }
+    .btnSubmit {
+      padding: 0.3rem 0.5rem;
+      border: 1px solid #1df01d;
+      background-color: white;
+      color: #0d800d;
+      font-size: 1rem;
+      &:hover {
+        color: #ebf3eb;
+        background-color: #0d800d;
+      }
+    }
+    .btnDelete {
+      background-color: #e61212;
+      color: white;
+      font-size: 0.9rem;
+      border: none;
+      margin-left: 0.2rem;
+      transition: all ease-in-out;
+      &:hover {
+        background-color: #ee9999;
+      }
+    }
+    button {
+      padding: 0.2rem 0.5rem;
+      background-color: rgb(80, 200, 69);
+      border-radius: 0.4rem;
+      outline: none;
+      &:hover {
+        background-color: rgb(56, 231, 40);
       }
     }
     .btnShow {
+      position: absolute;
+      top: 4;
+      right: 4;
       box-sizing: border-box;
       padding: 0.5rem 0.8rem;
       background-color: #fff;

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import NavBar from "./components/NavBar";
 import Count from "./components/Count";
-import Todo from "./components/Todo";
+import TodoList from "./components/TodoList";
 import { TodoContext } from "./context/showContext";
 
 const App = () => {
@@ -30,7 +30,7 @@ const App = () => {
               </button>
             </div>
             <div className='todo-list'>
-              {show ? <Todo /> : <h4>Todo List Is Hide</h4>}
+              {!show ? <TodoList /> : <h4>Todo List Is Hide</h4>}
             </div>
           </div>
         </div>
