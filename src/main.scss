@@ -4,44 +4,55 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   .container {
     margin: 0.5rem;
-    height: calc(100% - 60px);
+    height: calc(100% - 6rem);
     font-family: sans-serif;
     text-align: center;
-    background-color: rgba(241, 237, 231, 0.3);
+    background-color: rgba(231, 238, 241, 0.3);
     align-items: center;
     justify-content: center;
-    h1 {
-      margin: 0.7rem 0rem 0.2rem;
-      letter-spacing: 0.2rem;
-      font-size: 1.9rem;
-      color: transparent;
-      background: linear-gradient(
-        to left,
-        rgb(126, 192, 88),
-        rgb(202, 43, 131),
-        rgb(211, 198, 198),
-        rgb(139, 192, 25)
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      text-transform: uppercase;
-      -webkit-animation: animate 7s linear infinite;
-      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    .app-title {
+      margin: 0.7rem 0.4rem 0.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        margin: 0;
+        letter-spacing: 0.2rem;
+        font-size: 1.9rem;
+        color: transparent;
+        background: linear-gradient(
+          to left,
+          rgb(126, 192, 88),
+          rgb(202, 43, 131),
+          rgb(211, 198, 198),
+          rgb(139, 192, 25)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-transform: uppercase;
+        -webkit-animation: animate 11s linear infinite;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      span {
+        color: rgb(44, 55, 206);
+        margin-left: 0.3rem;
+      }
     }
     .row {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 70vh;
-      width: 95%;
+      width: 90%;
       margin: auto;
 
       .col {
         border-radius: 0.5rem;
-        background-color: #f3e7e7;
-        border: 1px solid rgba(235, 210, 235, 0.2);
+        background-color: #faf5f5;
         flex: 1;
         height: 90%;
         margin-left: 0.4rem;
@@ -62,7 +73,6 @@ body {
           align-items: center;
           height: 100%;
           width: 90%;
-          border: 1px solid rgba(209, 153, 120, 0.2);
         }
         .todo-list {
           margin: 1rem auto;
@@ -109,7 +119,6 @@ body {
       margin: 0.3rem 0.3rem;
       border-radius: 0.3rem;
       outline: none;
-      border: none;
       &:focus {
         border-bottom: 2px solid #49d4c9;
         background-color: #d6dfd5;

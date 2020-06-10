@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 import Count from "./components/Count";
 import TodoList from "./components/TodoList";
 import { TodoContext } from "./context/showContext";
-
+import "./style/footer.scss";
 const App = () => {
   const {
     state: { show },
@@ -18,7 +18,10 @@ const App = () => {
     <>
       <NavBar />
       <div className='container'>
-        <h1>React With Webpack Scss Context And Reducer</h1>
+        <div className='app-title'>
+          <h1>React With Webpack </h1>
+          <span>[ Babel | Scss | Context| Reducer ]</span>
+        </div>
         <div className='row'>
           <div className='col'>
             <Count />
@@ -35,6 +38,20 @@ const App = () => {
           </div>
         </div>
       </div>
+      <footer>
+        <h3>contact me</h3>
+        <div className='footer-adress'>
+          <div>
+            <h5>Address:</h5>
+          </div>
+          <div className='social-link'>
+            <a href='#'>Github</a>
+            <a href='#'>LinkedIn</a>
+            <a href='#'>You Tube</a>
+            <a href='#'>Twitter</a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
