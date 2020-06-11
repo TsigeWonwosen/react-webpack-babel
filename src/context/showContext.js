@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { reducer } from "./showReducer";
@@ -13,9 +13,11 @@ export function TodoProvider(props) {
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
     show: true,
-    todo: defaultTodo,
+    todo: JSON.parse(window.localStorage.getItem("todoList") || defaultTodo),
   });
-
+  useEffect(() => {
+    window.localStorage.setItem("todoList", JSON.stringify(state.todo));
+  });
   return (
     <TodoContext.Provider value={{ state, dispatch }}>
       {props.children}

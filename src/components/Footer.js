@@ -10,10 +10,17 @@ export default function Footer() {
           <h5>Address:</h5>
         </div>
         <div className='social-link'>
-          <a href='#'>Github</a>
+          <a
+            href='https://github.com/TsigeWonwosen/react-webpack-babel'
+            target='_blank'
+          >
+            Github
+          </a>
           <a href='#'>LinkedIn</a>
           <a href='#'>You Tube</a>
-          <a href='#'>Twitter</a>
+          <a href='https://twitter.com/abel_negn' target='_blank'>
+            Twitter
+          </a>
         </div>
       </div>
     </footer>
