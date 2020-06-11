@@ -13,7 +13,7 @@ export function TodoProvider(props) {
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
     show: true,
-    todo: JSON.parse(window.localStorage.getItem("todoList") || defaultTodo),
+    todo: JSON.parse(window.localStorage.getItem("todoList")) || defaultTodo,
   });
   useEffect(() => {
     window.localStorage.setItem("todoList", JSON.stringify(state.todo));
