@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import NavBar from "./components/NavBar";
 import Count from "./components/Count";
 import TodoList from "./components/TodoList";
+import Footer from "./components/Footer";
 import { TodoContext } from "./context/showContext";
-import "./style/footer.scss";
 const App = () => {
   const {
     state: { show },
@@ -33,25 +33,12 @@ const App = () => {
               </button>
             </div>
             <div className='todo-list'>
-              {!show ? <TodoList /> : <h4>Todo List Is Hide</h4>}
+              {show ? <TodoList /> : <h4>Todo List Is Hide</h4>}
             </div>
           </div>
         </div>
       </div>
-      <footer>
-        <h3>contact me</h3>
-        <div className='footer-adress'>
-          <div>
-            <h5>Address:</h5>
-          </div>
-          <div className='social-link'>
-            <a href='#'>Github</a>
-            <a href='#'>LinkedIn</a>
-            <a href='#'>You Tube</a>
-            <a href='#'>Twitter</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };

@@ -39,7 +39,7 @@ body {
       }
       span {
         color: rgb(44, 55, 206);
-        margin-left: 0.3rem;
+        margin-top: 0.2rem;
       }
     }
     .row {
@@ -78,9 +78,9 @@ body {
           margin: 1rem auto;
           height: 100%;
           width: 90%;
-          flex: 6;
+          flex: 10;
           background-color: rgba(255, 255, 255, 0.3);
-          border: 1px solid rgba(216, 208, 241, 0.2);
+          border: 1px solid rgba(216, 208, 241, 0.1);
           border-radius: 0.5rem;
         }
       }
@@ -104,7 +104,7 @@ body {
         padding: 1rem;
         width: 80%;
         margin: auto;
-        border: 1px solid rgba(202, 125, 25, 0.2);
+        border: 1px solid rgba(25, 122, 202, 0.2);
 
         li {
           margin-bottom: 0.3rem;
@@ -114,8 +114,11 @@ body {
       }
     }
     .todo-input {
+      position: relative;
       padding: 0.34rem 0.3rem;
       width: 70%;
+      font-size: 1rem;
+      color: #0c285f;
       margin: 0.3rem 0.3rem;
       border-radius: 0.3rem;
       outline: none;
@@ -158,24 +161,24 @@ body {
     .btnShow {
       position: absolute;
       top: 4;
-      right: 4;
+      right: 2;
       box-sizing: border-box;
-      padding: 0.5rem 0.8rem;
+      padding: 0.5rem 0.4rem;
       background-color: #fff;
       border-radius: 0.5rem;
       overflow: hidden;
       box-shadow: 0 0px 7px rgb(235, 220, 220);
-      border: 1.5px solid rgb(224, 39, 39);
+      border: 1px solid rgb(80, 141, 233);
       font-size: 1.2em;
-      color: rgb(224, 39, 39);
+      color: rgb(19, 49, 221);
       outline: none;
-      width: 8rem;
-      font-size: 1.2rem;
-      font-weight: 700;
+      width: 7rem;
+      font-size: 1rem;
+      font-weight: 400;
       transition: all 0.3s ease-in-out;
       &:hover {
-        color: rgb(246, 242, 242);
-        background-color: rgba(231, 12, 12, 0.8);
+        color: rgb(245, 235, 235);
+        background-color: rgba(8, 57, 192, 0.8);
       }
     }
   }

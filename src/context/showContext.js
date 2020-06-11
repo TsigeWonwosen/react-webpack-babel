@@ -12,7 +12,7 @@ const defaultTodo = [
 export function TodoProvider(props) {
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
-    show: false,
+    show: true,
     todo: defaultTodo,
   });
 

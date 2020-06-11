@@ -30,22 +30,27 @@
   .count-btn {
     flex: 1;
     justify-content: center;
-  }
-  button {
-    padding: 0.4rem 0.3rem;
-    margin-left: 0.3rem;
-    width: 6rem;
-    font-size: 1rem;
-    font-weight: 700;
-    outline: none;
-    border-radius: 0.5rem;
-    border: 1px solid #e90a0a;
-    background-color: transparent;
-    color: #d30f0f;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      color: white;
-      background-color: #e61616;
+    button {
+      padding: 0.4rem 0.3rem;
+      margin-left: 0.3rem;
+      width: 6rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      outline: none;
+      border-radius: 0.5rem;
+      border: 1px solid #8d84db;
+      background-color: white;
+      color: #183feb;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: white;
+        background-color: #4030cf;
+      }
     }
+  }
+  h2 {
+    letter-spacing: 0.1rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #596ecf;
   }
 }
