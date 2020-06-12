@@ -15,7 +15,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className='app'>
       <NavBar />
       <div className='container'>
         <div className='app-title'>
@@ -39,7 +39,7 @@ const App = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

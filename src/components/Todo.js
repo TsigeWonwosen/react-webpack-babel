@@ -37,7 +37,7 @@ export default function Todo({ id, completed, task }) {
               });
             }}
           />
-          {task}
+          <span className='todo-task'>{task} </span>
           <div>
             <button onClick={() => setEdit(!isEdit)}>Edit</button>
 

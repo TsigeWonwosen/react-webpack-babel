@@ -1,13 +1,18 @@
 footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   margin: 0;
+  margin-bottom: 0;
   height: 3rem;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   background-color: #a09e96;
-  opacity: 0.8;
+  opacity: 0.9;
   h3 {
     font-size: 1.2rem;
-    color: #f7f8f8;
+    color: #e7def0;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     width: 30%;
